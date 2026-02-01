@@ -1,0 +1,86 @@
+/* Fundo estilo hacker com animação */
+body::before {
+  content: "";
+  position: fixed;   /* fica fixo na tela */
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0,255,0,0.2) 1px,
+    transparent 1px
+  );
+  background-size: 100% 20px;
+  animation: hackerRain 10s linear infinite;
+  pointer-events: none; /* não atrapalha cliques */
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;   /* altura mínima */
+  background: black;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  overflow-y: auto;    /* permite rolagem */
+  cursor: crosshair; /* muda o ponteiro do mouse */
+}
+
+/* Estilo da lista */
+ol {
+  line-height: 2;          /* espaçamento entre linhas */
+  color: #00ff00;          /* cor padrão estilo hacker */
+  font-family: 'Courier New', monospace;
+}
+
+/* Efeito ao passar o mouse em cada linha */
+ol li:hover {
+  color: #ff0000;          /* muda a cor para vermelho */
+  background-color: rgba(0, 255, 0, 0.1); /* leve destaque no fundo */
+  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;         /* muda o ponteiro ao passar */
+}
+
+
+/* Animação de "chuva de código" */
+@keyframes hackerRain {
+  0%   { background-position: 0 0; }        /* início da animação */
+  100% { background-position: 0 2000px; }   /* fim da animação */
+}
+
+body::before {
+  content: "";
+  position: fixed;       /* cobre sempre a tela, mesmo rolando */
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0,255,0,0.2) 1px,
+    transparent 1px
+  );
+  background-size: 100% 20px;
+  animation: hackerRain 10s linear infinite;
+  pointer-events: none;  /* não atrapalha cliques */
+  z-index: -1;           /* fica atrás do conteúdo */
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;     /* garante altura mínima */
+  background: black;     /* fundo base */
+  color: #00ff00;        /* estilo hacker */
+  font-family: 'Courier New', monospace;
+}
+
+/* Imagem com efeito animado */
+img {
+  display: block;
+  margin: 50px auto;
+  width: 700px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ff00;
+  animation: pulseGlow 10s infinite; 
+}
