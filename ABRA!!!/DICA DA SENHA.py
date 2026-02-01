@@ -5,7 +5,7 @@
 
 
 def fallout_terminal():
-    print("Miguel Industries, A Little Powerful(TM) \nRAISE YOUR MIND, NOT YOUR EARS")
+    print("Miguel Industries, A Little Powerful(TM) \nUSE YOUR MIND, NOT YOUR BIG EARS")
     print("> VOL/R2.D2\n")
     print("THIS IS A TEST, YOU ANIMAL: 1\n")
     
@@ -23,3 +23,4 @@ def fallout_terminal():
     print("JXYF)+!G3+       BURRO!!+O+!C+  [J!E!K!T!")
 
 #fallout_terminal()
+
